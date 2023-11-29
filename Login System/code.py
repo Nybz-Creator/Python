@@ -1,3 +1,6 @@
+import json
+
+
 # Defining user database file
 user_db_file = "user_database.json"
 
@@ -27,8 +30,8 @@ def login():
     username = input("Enter your username: ")
     password = input("Enter your password: ")
 
-    with open(user_db_file, "r") as file
-        Users = json.load(file)
+    with open(user_db_file, "r") as file:
+        users = json.load(file)
 
     if user_exists(username):
         if users[username] ["password"] == password:
